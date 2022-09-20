@@ -1,0 +1,23 @@
+[package]
+name = "rust-yescrypt"
+authors = ["Gabriel Mendoza <gabrielemf@hotmail.com>"]
+description = "Bindings into C for `Yescrypt` algorithm"
+repository = "https://github.com/mendozg/rust-yescrypt"
+version = "0.5.0"
+build = "build.rs"
+keywords = ["rust", "crypto", "yescrypt", "POW"]
+readme = "README.md"
+edition = "2021"
+license = "Apache-2.0"
+
+
+[build-dependencies]
+gcc = "0.3"
+
+[dependencies]
+clippy = {version = "0.0", optional = true}
+hex = "0.4"
+unicode-segmentation = "0.1.2"
+
+[features]
+dev = ["clippy"]
